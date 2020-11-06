@@ -10,8 +10,8 @@ export const headData = {
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
+  name: 'Malte',
+  subtitle: 'Welcome to my website',
   cta: '',
 };
 
@@ -21,28 +21,28 @@ export const aboutData = {
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: '', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'project_esperienza.jpg',
+    title: 'esperienza.art',
+    info: 'Responsive Wordpress Site based on Slider Revolution Plugin',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://esperienza.art/',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'project_maeker.jpg',
+    title: 'Thomas Maeker Bergtouren',
+    info: 'Responsive Wordpress Site based on Slider Revolution Plugin',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://maeker-bergtouren.de/',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),

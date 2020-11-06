@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import GithubButtons from '../GithubButtons/GithubButtons';
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { githubButtons } from '../../mock/data';
-
+import  { Fragment } from 'react'
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
   const { networks } = footer;
@@ -38,10 +38,7 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          © {new Date().getFullYear()} - Template developed by{' '}
-          <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
-            Jacobo Martínez
-          </a>
+
         </p>
 
         {isEnabled && <GithubButtons />}

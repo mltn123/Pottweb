@@ -3,7 +3,8 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import  { Fragment } from 'react'
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
@@ -22,12 +23,36 @@ const Header = () => {
   }, []);
 
   return (
+
+
     <section id="hero" className="jumbotron">
+
       <Container>
+      <h4 className="dark-mode-button">
+
+          <ThemeToggler>
+                 {({ theme, toggleTheme }) => {
+                   const iconClass =
+                     theme === 'light' ? 'fa fa-moon-o fa-2x' : 'fa fa-sun-o fa-2x'
+                   return (
+                     <Fragment>
+                       <i
+                         className={iconClass}
+                         onClick={() => {
+                           const nextTheme = theme === 'light' ? 'dark' : 'light'
+                           toggleTheme(nextTheme)
+                         }}
+                       />
+                     </Fragment>
+                   )
+                 }}
+               </ThemeToggler>
+      </h4>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            <span className="text-color-main">{name || 'Malte'}</span>
             <br />
             {subtitle || "I'm the Unknown Developer."}
           </h1>
