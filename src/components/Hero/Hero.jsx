@@ -22,13 +22,25 @@ const Header = () => {
     }
   }, []);
 
-  return (
 
+  return (
 
     <section id="hero" className="jumbotron">
 
       <Container>
       <h4 className="dark-mode-button">
+      <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+      <div id="hideonmobile">
+      <a class="link" href="#">
+  <span class="link__arrow">
+    <span></span>
+    <span></span>
+  </span>
+  <span class="link__line"></span>
+  <span class="link__text">Darkmode</span>
+</a>
+      </div>
+
 
           <ThemeToggler>
                  {({ theme, toggleTheme }) => {
@@ -47,6 +59,7 @@ const Header = () => {
                    )
                  }}
                </ThemeToggler>
+                     </Fade>
       </h4>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
 
