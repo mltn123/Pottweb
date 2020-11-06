@@ -56,7 +56,23 @@ const Header = () => {
       </Fade>
 
 
-
+          <ThemeToggler>
+                 {({ theme, toggleTheme }) => {
+                   const iconClass =
+                     theme === 'light' ? 'fa fa-moon-o fa-2x' : 'fa fa-sun-o fa-2x'
+                   return (
+                     <Fragment>
+                       <i
+                         className={iconClass}
+                         onClick={() => {
+                           const nextTheme = theme === 'light' ? 'dark' : 'light'
+                           toggleTheme(nextTheme)
+                         }}
+                       />
+                     </Fragment>
+                   )
+                 }}
+               </ThemeToggler>
                      </Fade>
       </h4>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">

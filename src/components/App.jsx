@@ -8,8 +8,12 @@ import Footer from './Footer/Footer';
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import Navbar from './Navbar/Navbar';
+
+
 
 function App() {
+  const [navbar, setNavbar] = useState({});
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -25,11 +29,12 @@ function App() {
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+    <PortfolioProvider value={{navbar, hero, about, projects, contact, footer }}>
+    <Navbar />
+    <a name="Hero"><Hero /></a>
+    <a name="About"><About /></a>
+    <a name="Projects"><Projects /></a>
+    <a name="Contact"> <Contact /></a>
       <Footer />
     </PortfolioProvider>
   );

@@ -17,6 +17,26 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+
+
+
+.navbar-custom {
+ background-color: #00cdac;
+}/* change the brand and text color */
+.navbar-custom .navbar-brand,
+
+.navbar-custom .navbar-text {
+    color: #272341;
+    font-size: 160%;
+}/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color:  #272341;
+}/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
 .hidden {
   display: none;
 }
@@ -30,7 +50,7 @@
   align-items: center;
   padding: 5px;
   text-decoration: none;
-  transform: rotate(90deg) translate3d(87%, 0, 0);
+  transform: rotate(160deg) translate3d(87%, 0, 0);
 
   &__arrow {
     display: inline-flex;
@@ -99,6 +119,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
+      transform: rotate(180deg) translate3d(10%, 0, 0);
   }
 
   &:hover {
@@ -665,16 +686,31 @@ a:hover {
 }
 body.dark{
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+  .navbar-custom {
+    background-color: #6db08b;
+  }/* change the brand and text color */
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-text {
+      color: rgba(255,255,255,.8);
+  }/* change the link color */
+  .navbar-custom .navbar-nav .nav-link {
+      color: #ffffff;
+  }/* change the color of active or hovered links */
+  .navbar-custom .nav-item.active .nav-link,
+  .navbar-custom .nav-item:hover .nav-link {
+      color: #ffffff;
+  }
 
 
   @media all and (min-width: 1180px){
+  background-color: #181818; // 2
   .link {
     $self: &;
     display: inline-flex;
     align-items: center;
     padding: 5px;
     text-decoration: none;
-    transform: rotate(90deg) translate3d(87%, 0, 0);
+    transform: rotate(160deg) translate3d(87%, 0, 0);
 
     &__arrow {
       display: inline-flex;
@@ -743,6 +779,7 @@ body.dark{
       font-family: 'Oswald', sans-serif;
       font-size: 18px;
       text-transform: uppercase;
+      transform: rotate(180deg) translate3d(10%, 0, 0);
     }
 
     &:hover {
@@ -1024,6 +1061,7 @@ body.dark{
     .about-wrapper {
       @include respond(phone) {
         padding-bottom: 5rem;
+
       }
 
       &__image {
